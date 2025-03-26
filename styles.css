@@ -1,0 +1,81 @@
+body {
+    cursor: url('/cursor-2.png'), auto;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #4CAF50;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+#skills {
+    background-image: linear-gradient(135deg, #4CAF50, #81C784);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+}
+
+.job {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background: #fafafa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff5722;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+}
