@@ -1,127 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vishwas Desai - Interactive Resume</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
-
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        h1, h2, h3 {
-            color: #4CAF50;
-            text-align: center;
-        }
-
-        .container {
-            width: 80%;
-            margin: 20px auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 2;
-        }
-    </style>
 </head>
 <body>
 
+    <!-- Sticky Nav -->
+    <nav class="navbar">
+        <span class="nav-logo">VD</span>
+        <div class="nav-links">
+            <a href="#summary">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
 
-    <header style="background-color: #4CAF50; color: white; padding: 20px; text-align: center;">
-        <h1>Vishwas Desai</h1>
-        <p>Bengaluru, IN | Ph: +91 9481108968 | <a href="mailto:vishwasmd.work@gmail.com" style="color: white;">vishwasmd.work@gmail.com</a></p>
-        <a href="https://www.linkedin.com/in/vishwas-md" target="_blank" style="color: white; text-decoration: underline;">LinkedIn</a>
-        |
-        <a href="https://vedhcet.netlify.app/" target="_blank" style="color: white; text-decoration: underline;">Portfolio</a>
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="avatar">VD</div>
+            <h1>Vishwas Desai</h1>
+            <p class="hero-sub">AI & ML Engineer · Full-Stack Developer · Harvard ALP Scholar</p>
+            <p class="hero-location">📍 Bengaluru, IN &nbsp;|&nbsp; 📞 +91 9481108968</p>
+            <div class="hero-links">
+                <a href="mailto:vishwasmd.work@gmail.com" class="btn btn-outline">✉ Email</a>
+                <a href="https://www.linkedin.com/in/vishwas-md" target="_blank" class="btn btn-outline">🔗 LinkedIn</a>
+                <a href="https://vedhcet.netlify.app/" target="_blank" class="btn btn-solid">🌐 Portfolio</a>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-       
-        <section id="summary">
+    <main class="container">
+
+        <!-- Summary -->
+        <section id="summary" class="section">
+            <div class="section-label">About</div>
             <h2>Professional Summary</h2>
             <p>Aspiring software engineer with expertise in AI & ML, specializing in NLP, Generative AI, and cloud-based development. Experienced in scalable AI applications, system performance optimization, and collaborative software solutions. Harvard ALP Scholar and active in hackathons and open-source projects.</p>
         </section>
 
-     
-        <section id="experience">
+        <!-- Experience -->
+        <section id="experience" class="section">
+            <div class="section-label">Work</div>
             <h2>Experience</h2>
-            <div class="job">
-                <h3>Web Development Intern – Edunet Foundation & EY GDS</h3>
-                <p><strong>Dec 2024 – Jan 2025</strong></p>
-                <ul>
-                    <li>Developed "Msvify" – a Spotify clone using full-stack development.</li>
-                    <li>Earned certifications from AICTE, Edunet Foundation, and EY GDS.</li>
-                </ul>
-            </div>
+            <div class="timeline">
 
-            <div class="job">
-                <h3>Open Source Contributor – GSSOC & Hacktoberfest</h3>
-                <p><strong>Oct 2024 – Nov 2024</strong></p>
-                <ul>
-                    <li>Contributed to open-source projects and ranked in the top 7% out of 3.5K contributors.</li>
-                </ul>
-            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Web Development Intern</h3>
+                            <span class="badge">Dec 2024 – Jan 2025</span>
+                        </div>
+                        <p class="company">Edunet Foundation & EY GDS</p>
+                        <ul>
+                            <li>Developed "Msvify" – a Spotify clone using full-stack development.</li>
+                            <li>Earned certifications from AICTE, Edunet Foundation, and EY GDS.</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="job">
-                <h3>AI and Cloud Intern – Edunet Foundation (IBM)</h3>
-                <p><strong>June 2024 – July 2024</strong></p>
-                <ul>
-                    <li>Developed cloud-based solutions with IBM WatsonX, improving system performance by 30%.</li>
-                    <li>Created an AI chatbot for college using IBM Cloud.</li>
-                </ul>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>Open Source Contributor</h3>
+                            <span class="badge">Oct 2024 – Nov 2024</span>
+                        </div>
+                        <p class="company">GSSOC & Hacktoberfest</p>
+                        <ul>
+                            <li>Contributed to open-source projects and ranked in the top 7% out of 3.5K contributors.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <h3>AI and Cloud Intern</h3>
+                            <span class="badge">June 2024 – July 2024</span>
+                        </div>
+                        <p class="company">Edunet Foundation (IBM)</p>
+                        <ul>
+                            <li>Developed cloud-based solutions with IBM WatsonX, improving system performance by 30%.</li>
+                            <li>Created an AI chatbot for college using IBM Cloud.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-     
-        <section id="education">
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="section-label">Academics</div>
             <h2>Education</h2>
-            <ul>
-                <li><strong>Ramaiah Institute of Technology</strong> – BE, CSE (AI & ML) – GPA: 9.2 (Expected June 2027)</li>
-                <li><strong>RLS Science PU College</strong> – PUC (Science) – 93% (March 2023)</li>
-                <li><strong>Phoenix Public Residential School</strong> – ICSE – 95% (March 2021)</li>
-            </ul>
+            <div class="edu-grid">
+                <div class="edu-card">
+                    <div class="edu-icon">🎓</div>
+                    <div>
+                        <h3>Ramaiah Institute of Technology</h3>
+                        <p>BE, CSE (AI & ML)</p>
+                        <span class="badge accent">GPA: 9.2 · Expected June 2027</span>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">📘</div>
+                    <div>
+                        <h3>RLS Science PU College</h3>
+                        <p>PUC (Science)</p>
+                        <span class="badge accent">93% · March 2023</span>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">📗</div>
+                    <div>
+                        <h3>Phoenix Public Residential School</h3>
+                        <p>ICSE</p>
+                        <span class="badge accent">95% · March 2021</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-       
-        <section id="skills">
-            <h2 >Skills</h2>
-            <ul>
-                <li>C, C++, Python, Git, GitHub</li>
-                <li>NLP, IBM Cloud, AWS Lex</li>
-                <li>Web Development (React, TypeScript)</li>
-                <li>Blender, GIMP, Canva</li>
-            </ul>
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="section-label">Stack</div>
+            <h2>Skills</h2>
+            <div class="skills-group">
+                <div class="skills-category">
+                    <h4>Languages</h4>
+                    <div class="tags">
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Python</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>AI / Cloud</h4>
+                    <div class="tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">IBM Cloud</span>
+                        <span class="tag">AWS Lex</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Web</h4>
+                    <div class="tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">MERN Stack</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Tools</h4>
+                    <div class="tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Blender</span>
+                        <span class="tag">GIMP</span>
+                        <span class="tag">Canva</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        
-        <section id="projects">
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="section-label">Work</div>
             <h2>Projects</h2>
-            <ul>
-                <li><a href="https://msvify.netlify.app/" target="_blank">Msvify</a> – Spotify-inspired web app with MERN stack and AWS S3.</li>
-                <li><a href="http://sage-by-msv.netlify.app/" target="_blank">SAGE Website</a> – Reduced design workload by 80% with a responsive website.</li>
-                <li><a href="http://foodstock-manager.netlify.app/" target="_blank">Smart Food Inventory System</a> – Real-time inventory management with notifications.</li>
-            </ul>
+            <div class="project-grid">
+
+                <a href="https://msvify.netlify.app/" target="_blank" class="project-card">
+                    <div class="project-icon">🎵</div>
+                    <h3>Msvify</h3>
+                    <p>Spotify-inspired web app built with MERN stack and AWS S3 for audio storage.</p>
+                    <span class="project-link">View Project →</span>
+                </a>
+
+                <a href="http://sage-by-msv.netlify.app/" target="_blank" class="project-card">
+                    <div class="project-icon">🌿</div>
+                    <h3>SAGE Website</h3>
+                    <p>Reduced design workload by 80% with a fully responsive organizational website.</p>
+                    <span class="project-link">View Project →</span>
+                </a>
+
+                <a href="http://foodstock-manager.netlify.app/" target="_blank" class="project-card">
+                    <div class="project-icon">📦</div>
+                    <h3>Smart Food Inventory</h3>
+                    <p>Real-time inventory management system with smart notifications and alerts.</p>
+                    <span class="project-link">View Project →</span>
+                </a>
+
+            </div>
         </section>
 
-        
-        <section id="contact">
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <div class="section-label">Connect</div>
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:vishwasmd.work@gmail.com">vishwasmd.work@gmail.com</a></p>
-            <p>Phone: +91 9481108968</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/vishwas-md" target="_blank">Vishwas Desai</a></p>
+            <div class="contact-grid">
+                <a href="mailto:vishwasmd.work@gmail.com" class="contact-card">✉ vishwasmd.work@gmail.com</a>
+                <a href="tel:+919481108968" class="contact-card">📞 +91 9481108968</a>
+                <a href="https://www.linkedin.com/in/vishwas-md" target="_blank" class="contact-card">🔗 LinkedIn Profile</a>
+                <a href="https://vedhcet.netlify.app/" target="_blank" class="contact-card">🌐 Portfolio Site</a>
+            </div>
         </section>
-    </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>Designed & built by Vishwas Desai · 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
